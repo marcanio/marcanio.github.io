@@ -14,6 +14,7 @@
     <link href="css/styles.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+
 </head>
 
 <body onload="typeWriter();">
@@ -69,7 +70,7 @@
     </div>
     <!-- End #lead -->
 
-    <div id="about">
+    <div id="about" class="hideme">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -90,53 +91,59 @@
         <p></p>
 
         <div id="experience-timeline">
-            <div data-date="May 2019 – August 2019">
+            <div data-date="May 2019 – August 2019" class="hideme">
                 <h3>Holland LP</h3>
                 <h4>Software Engineering Intern</h4>
-                <ul>
-                    <li>
-                        Reverse engineered a relational database in MySQL to develop a learning tool.
-                    </li>
-                    <li>
-                        Automized a reporting service for monthly invoices with Talend using artificial intelligence.
-                    </li>
-                    <li>
-                        Upgraded a flagship software in C++ from QT 5.4 (2012) to QT 5.12 (2018)
-                    </li>
-                    <li>
-                        Displayed Data from MySQL Database to website using PHP.
-                    </li>
-                </ul>
+                <div class="ExperienceList">
+                    <ul>
+                        <li>
+                            <a>Reverse engineered a relational database in MySQL to develop a learning tool.</a>
+                        </li>
+                        <li>
+                            <a>Automized a reporting service for monthly invoices with Talend using artificial intelligence. </a>
+                        </li>
+                        <li>
+                            <a>Upgraded a flagship software in C++ from QT 5.4 (2012) to QT 5.12 (2018)</a>
+                        </li>
+                        <li>
+                            <a>Displayed Data from MySQL Database to website using PHP.</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div data-date="September 2015 – September 2016">
+            <div data-date="September 2015 – September 2016" class="hideme">
                 <h3>Solution Center</h3>
                 <h4>IT Support Specialist</h4>
-                <ul>
-                    <li>
-                        Provided technical assistance ranging from system information to system configuration and problem resolution.
-                    </li>
-                    <li>
-                        Supervised, train and assist 20 IT technicians.
-                    </li>
-                </ul>
+                <div class="ExperienceList">
+                    <ul>
+                        <li>
+                            <a>Provided technical assistance ranging from system information to system configuration and problem resolution.</a>
+                        </li>
+                        <li>
+                            <a>Supervised, train and assist 20 IT technicians.</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div data-date="September 2015 – September 2016">
+            <div data-date="September 2015 – September 2016" class="hideme">
                 <h3>Union Drive Marketplace</h3>
                 <h4>Team Supervisor</h4>
-                <ul>
-                    <li>
-                        Worked closely with managers to identify and resolve performance issues/ opportunity of the team members as they arise.
-                    </li>
-                </ul>
+                <div class="ExperienceList">
+                    <ul>
+                        <li>
+                            <a>Worked closely with managers to identify and resolve performance issues/ opportunity of the team members as they arise.</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <a href="#" class="btn-rounded-white">View Resume</a>
         </div>
     </div>
     <!-- End #experience -->
 
-    <div id="education">
+    <div id="education" class="hideme">
         <h2 class="heading">Education</h2>
         <div class="education-block">
             <h3>Iowa State Univeristy</h3>
@@ -145,7 +152,18 @@
             <h4>Bachelor of Science in Computer Engineering</h4>
             <span> <B>GPA: 3.21</B></span>
             <p>
-                Relevant Coursework: Embedded Systems, User Interfaces, Computer organization and Assembly
+
+                <b>Relevant Coursework:</b> Embedded Systems, User Interfaces, Computer organization and Assembly
+            </p>
+        </div>
+        <div class="education-block">
+            <h3>Downers Grove North</h3>
+            <span class="education-date">2014 - 2017</span>
+
+            <h4>High School Diploma</h4>
+
+            <p>
+                <b>Activites:</b> Project Lead the Way, Captain of the swim team, and Engineering club.
             </p>
         </div>
         <!-- End .education-block -->
@@ -164,14 +182,14 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <div id="lead-overlay"></div>
-                        <div id="lead-content">
-                            <h3>Project Name Here</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                            </p>
-                            <a href="#">View Project</a>
-                        </div>
+
+
+                        <h3>Project Name Here</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        </p>
+                        <a href="#" class="modal-trigger" data-modal="modal-name">View Project</a>
+
                     </div>
 
                     <!-- End .project-info -->
@@ -196,9 +214,11 @@
             </div>
         </div>
     </div>
+
+
     <!-- End #projects -->
 
-    <div id="skills">
+    <div id="skills" class="hideme">
         <h2 class="heading">Skills</h2>
         <ul>
             <li>C</li>
@@ -222,7 +242,7 @@
     </div>
     <!-- End #skills -->
 
-    <div id="contact">
+    <div id="contact" class="hideme" style="background-image: url(images/Chicago.jpg);">
         <h2>Get in Touch</h2>
         <div id="contact-form">
             <form method="POST" action="https://formspree.io/email@email.com">
