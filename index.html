@@ -14,10 +14,11 @@
     <link href="css/styles.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 
 </head>
+
 
 <body onload="typeWriter();">
     <div id="mobile-menu-open" class="shadow-large">
@@ -54,10 +55,19 @@
     <div id="lead">
         <div id="lead-overlay"></div>
         <div id="lead-content">
-            <h4 id="HiMyName" style="font-size:30px;"></h4>
-            <h1 id="MyName" class="anim-typewriter"></h1>
-            <h2 id="computa"></h2>
-
+            <h2 style="font-size:30px;">Hey, I'm</h2>
+            <h1 class="ml2">Eric Marcanio</h1>
+            <h2 class="ml4">
+                <span>I enjoy </span>
+                <p></p>
+                <span class="letters letters-1">Programming</span>
+                <span class="letters letters-2">Learning</span>
+                <span class="letters letters-3">Rock Climbing</span>
+                <span class="letters letters-4">Trying new things</span>
+                <span class="letters letters-5">Meeting new people</span>
+                <span class="letters letters-6">Working out</span>
+                <span class="letters letters-7">Laughing</span>
+            </h2>
         </div>
         <!-- End #lead-content -->
 
@@ -72,25 +82,36 @@
     </div>
     <!-- End #lead -->
 
-    <div id="about" class="hideme">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        <!-- Add some fun stuff about me-->*Something interesting*
-                    </p>
-                </div>
-            </div>
+    <div id="about">
+        <h1 class="ml5">
+            <span class="text-wrapper">
+                         
+            <span class="letters letters-left">About</span>
+
+            <span class="letters letters-right">Me</span>
+            <span class="line line2"></span>
+            </span>
+        </h1>
+
+        <div class="col-md-8">
+            <p>
+                <!-- Add some fun stuff about me-->*Something interesting*
+            </p>
         </div>
+
+
     </div>
     <!-- End #about -->
 
     <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
 
+        <h1 class="ml5" class="hideme">
+            <span class="text-wrapper">
+           
+            <span class="letters letters-left ">Experience</span>
+            <span class="line line2"></span>
+            </span>
+        </h1>
 
         <div id="experience-timeline">
             <div data-date="May 2019 – August 2019" class="hideme">
@@ -145,8 +166,14 @@
     </div>
     <!-- End #experience -->
 
-    <div id="education" class="hideme">
-        <h2 class="heading">Education</h2>
+    <div id="education">
+        <h1 class="ml5" class="hideme">
+            <span class="text-wrapper">
+           
+            <span class="letters letters-left ">Education</span>
+            <span class="line line2"></span>
+            </span>
+        </h1>
         <div class="education-block">
             <h3>Iowa State Univeristy</h3>
             <span class="education-date">Expected graduation - May 2021</span>
@@ -175,7 +202,13 @@
     <!-- End #education -->
 
     <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
+        <h1 class="ml5" class="hideme">
+            <span class="text-wrapper">
+           
+            <span class="letters letters-left ">Projects</span>
+            <span class="line line2"></span>
+            </span>
+        </h1>
         <div class="container">
             <div class="row">
                 <div class="project shadow-large">
@@ -241,7 +274,13 @@
     <!-- End #projects -->
 
     <div id="skills" class="hideme">
-        <h2 class="heading">Skills</h2>
+        <h1 class="ml5">
+            <span class="text-wrapper">
+           
+            <span class="letters letters-left">Skills</span>
+            <span class="line line2"></span>
+            </span>
+        </h1>
         <ul>
             <li>C</li>
             <li>C++</li>
@@ -264,7 +303,7 @@
     </div>
     <!-- End #skills -->
 
-    <div id="contact" class="hideme" style="background-image: url(images/Chicago.jpg);">
+    <div id="contact" style="background-image: url(images/Chicago.jpg);">
         <h2>Get in Touch</h2>
         <div id="contact-form">
             <form method="POST" action="https://formspree.io/email@email.com">
@@ -317,5 +356,150 @@
 
 
 </body>
+
+<script>
+    //Headings for each section
+    anime.timeline({
+            loop: false
+        })
+        .add({
+            targets: '.ml5 .line',
+            opacity: [0.5, 1],
+            scaleX: [0, 1],
+            easing: "easeInOutExpo",
+            duration: 700
+        }).add({
+            targets: '.ml5 .line',
+            duration: 600,
+            translateY: (-0.625 + 0.625 * 2) + "em"
+
+
+        }).add({
+            targets: '.ml5 .letters-left',
+            opacity: [0, 1],
+            translateX: ["0.5em", 0],
+            duration: 600,
+            offset: '-=300'
+        }).add({
+            targets: '.ml5 .letters-right',
+            opacity: [0, 1],
+            translateX: ["-0.5em", 0],
+
+            duration: 600,
+
+
+        });
+    var textWrapper = document.querySelector('.ml2');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({
+            loop: false
+        })
+        .add({
+            targets: '.ml2 .letter',
+            scale: [4, 1],
+            opacity: [0, 1],
+            translateZ: 0,
+            duration: 1000,
+            delay: (el, i) => 70 * i
+        });
+
+    var ml4 = {};
+    ml4.opacityIn = [0, 1];
+    ml4.scaleIn = [0.2, 1];
+    ml4.scaleOut = 3;
+    ml4.durationIn = 800;
+    ml4.durationOut = 600;
+    ml4.delay = 500;
+
+    anime.timeline({
+            loop: true
+        })
+        .add({
+            targets: '.ml4 .letters-1',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.ml4 .letters-1',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.ml4 .letters-2',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.ml4 .letters-2',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.ml4 .letters-3',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.ml4 .letters-3',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.ml4 .letters-4',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.ml4 .letters-4',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.ml4 .letters-5',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.ml4 .letters-5',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.ml4 .letters-6',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.ml4 .letters-6',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        }).add({
+            targets: '.ml4 .letters-7',
+            opacity: ml4.opacityIn,
+            scale: ml4.scaleIn,
+            duration: ml4.durationIn
+        }).add({
+            targets: '.ml4 .letters-7',
+            opacity: 0,
+            scale: ml4.scaleOut,
+            duration: ml4.durationOut,
+            easing: "easeInExpo",
+            delay: ml4.delay
+        });
+</script>
 
 </html>

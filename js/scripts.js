@@ -3,6 +3,7 @@ let i = 0;
 let j = 0;
 let k = 0;
 
+//Not used anymore
 function typeWriter() {
     let txt = 'Hello my name is';
     let txt2 = "Eric Marcanio";
@@ -24,9 +25,9 @@ function typeWriter() {
 }
 
 
-
 //Scrolling feature down the page
 $(document).ready(function() {
+
     //Click and scroll functions
     jQuery('a').click(function() {
         jQuery('html, body').animate({
@@ -69,30 +70,6 @@ $(document).ready(function() {
     });
 
     // Create timeline
-    $('#experience-timeline').each(function() {
-
-        $this = $(this); // Store reference to this
-        $userContent = $this.children('div'); // user content
-
-        // Create each timeline block
-        $userContent.each(function() {
-            $(this).addClass('vtimeline-content').wrap('<div class="vtimeline-point"><div class="vtimeline-block"></div></div>');
-        });
-
-        // Add icons to each block
-        $this.find('.vtimeline-point').each(function() {
-            $(this).prepend('<div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>');
-        });
-
-        // Add dates to the timeline if exists
-        $this.find('.vtimeline-content').each(function() {
-            var date = $(this).data('date');
-            if (date) { // Prepend if exists
-                $(this).parent().prepend('<span class="vtimeline-date">' + date + '</span>');
-            }
-        });
-
-    });
 
 
 });
