@@ -520,8 +520,8 @@ footer {
 
 .project-image {
     float: left;
-    width: 400px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     object-fit: contain;
 }
 
@@ -923,4 +923,28 @@ footer {
     left: 0;
     right: 0;
     opacity: 0;
+}
+
+.ml6 {
+    position: absolute;
+    font-weight: 100;
+    font-size: 1em;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml6 .letter {
+    color: #a0cfee;
+    display: inline-block;
+    line-height: 1em;
 }
