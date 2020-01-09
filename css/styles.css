@@ -327,7 +327,8 @@ footer {
 }
 
 #about {
-    padding: 75px 15px;
+    padding: 20px 5px;
+    text-align: center;
     border-bottom: 1px solid #dcd9d9
 }
 
@@ -341,6 +342,7 @@ footer {
 }
 
 #experience {
+    padding: 20px 5px;
     text-align: center;
     border-bottom: 1px solid #dcd9d9
 }
@@ -448,7 +450,7 @@ footer {
 }
 
 #education {
-    padding: 50px 15px 20px 15px;
+    padding: 20px 5px;
     border-bottom: 1px solid #dcd9d9;
     text-align: center
 }
@@ -497,7 +499,7 @@ footer {
 }
 
 #projects {
-    padding: 50px 15px;
+    padding: 20px 5px;
     border-bottom: 1px solid #dcd9d9;
     text-align: center
 }
@@ -518,6 +520,9 @@ footer {
 
 .project-image {
     float: left;
+    width: 400px;
+    height: 200px;
+    object-fit: contain;
 }
 
 .project-info {
@@ -553,7 +558,7 @@ footer {
 }
 
 #skills {
-    padding: 50px 15px;
+    padding: 20px 5px;
     text-align: center
 }
 
@@ -703,50 +708,12 @@ footer {
     padding: 0 0 0 15px
 }
 
-@media only screen and (max-width: 750px) {
-    #experience-timeline:before,
-    #experience-timeline:after {
-        left: 23px
-    }
-    .vtimeline-date {
-        width: auto;
-        position: relative;
-        margin-bottom: 15px;
-        display: block;
-        margin-left: 70px
-    }
-    .vtimeline-icon {
-        margin-left: 0
-    }
-    .vtimeline-content {
-        margin-left: 70px
-    }
-}
-
 @media only screen and (max-width: 992px) {
-    #lead {
-        height: auto;
-        min-height: auto;
-        max-height: auto;
-        padding: 100px 15px
-    }
-    #lead-content {
-        position: relative;
-        transform: none;
-        left: auto;
-        top: auto
-    }
     #lead-content h1 {
         font-size: 3em
     }
     #lead-content h2 {
         font-size: 1.75em
-    }
-    #about {
-        text-align: center
-    }
-    #about p {
-        text-align: left
     }
 }
 
