@@ -4,6 +4,7 @@ let j = 0;
 let k = 0;
 
 //Not used anymore
+/*
 function typeWriter() {
     let txt = 'Hello my name is';
     let txt2 = "Eric Marcanio";
@@ -23,7 +24,7 @@ function typeWriter() {
     }
     setTimeout(typeWriter, speed);
 }
-
+*/
 
 //Scrolling feature down the page
 $(document).ready(function() {

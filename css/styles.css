@@ -269,7 +269,7 @@ footer {
     position: absolute;
     z-index: 10;
     top: 30%;
-    left: 25%;
+    left: 30%;
     transform: translate(-50%, -50%);
     text-align: center
 }
@@ -742,13 +742,11 @@ footer {
         margin-bottom: 10px
     }
     #lead-content h1 {
-        font-size: 2em
+        font-size: 2em;
+        left: 20%;
     }
     #lead-content h2 {
-        font-size: 1.3em
-    }
-    #lead-content a {
-        padding: 10px 20px
+        font-size: 1em
     }
     #lead-down {
         display: none
@@ -813,58 +811,93 @@ footer {
     box-shadow: inset 2em 0 black;
 }
 
-.modal-window {
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
-    background-color: rgba(200, 200, 200, 0.75);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 999;
-    opacity: 0;
-    pointer-events: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    text-align: left;
+    background: rgba(0, 0, 0, .9);
+    transition: opacity .25s ease;
 }
 
-.modal-window:target {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.modal-window>div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 2rem;
-    background: #fff;
-    color: #444;
-}
-
-.modal-window header {
-    font-weight: bold;
-}
-
-.modal-close {
-    color: #aaa;
-    line-height: 50px;
-    font-size: 80%;
+.modal__bg {
     position: absolute;
-    right: 0;
-    text-align: center;
     top: 0;
-    width: 70px;
-    text-decoration: none;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
 }
 
-.modal-close:hover {
-    color: #000;
+.modal-state {
+    display: none;
 }
 
-.modal-window h1 {
-    font-size: 150%;
-    margin: 0 0 15px;
+.modal-state:checked+.modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-state:checked+.modal .modal__inner {
+    top: 0;
+}
+
+.modal__inner {
+    transition: top .25s ease;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    margin: auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1em 2em;
+    height: 50%;
+}
+
+.modal__close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+}
+
+.modal__close:after,
+.modal__close:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1.5em;
+    background: #ccc;
+    display: block;
+    transform: rotate(45deg);
+    left: 50%;
+    margin: -3px 0 0 -1px;
+    top: 0;
+}
+
+.modal__close:hover:after,
+.modal__close:hover:before {
+    background: #aaa;
+}
+
+.modal__close:before {
+    transform: rotate(-45deg);
 }
 
 
