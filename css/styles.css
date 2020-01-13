@@ -510,6 +510,7 @@ footer {
 }
 
 .project {
+    display: flex;
     position: relative;
     max-width: 900px;
     margin: 0 auto 30px auto;
@@ -519,31 +520,43 @@ footer {
 }
 
 .project-image {
-    float: left;
-    width: 300px;
-    height: 300px;
+    max-width: 50%;
+    max-height: 50%;
     object-fit: contain;
+}
+
+.project-imageOverlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(95, 177, 231, 0.8);
 }
 
 .project-info {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 300px;
     padding: 15px
 }
 
 .project-info h3 {
     font-size: 1.5em;
-    font-weight: 300;
-    color: #374054;
-    margin: 0 0 15px 0
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 15px 0;
+    text-shadow: 1px 1px #000;
 }
 
 .project-info p {
-    color: #74808a;
+    color: #fff;
     margin: 0 0 15px 0;
-    font-size: 0.9em
+    font-size: 1.1em;
+    text-shadow: 1px 1px #000;
+    font-weight: 300;
 }
 
 .no-image .project-info {
