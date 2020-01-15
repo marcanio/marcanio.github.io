@@ -694,7 +694,7 @@ footer {
     }
 }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (max-width: 501px) {
     .flip {
         width: 400px;
     }
