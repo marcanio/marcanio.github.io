@@ -228,10 +228,6 @@ footer {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
 }
 
-.shadow-large {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15)
-}
-
 .heading {
     position: relative;
     display: inline-block;
@@ -359,6 +355,11 @@ footer {
 
 #experience-timeline a {
     text-decoration: none;
+}
+
+#experience-timeline h3:hover {
+    background-color: #f2f2f5;
+    border-radius: 5px;
 }
 
 #experience-timeline:before {
@@ -498,78 +499,6 @@ footer {
     padding: 0 0 0 15px
 }
 
-#projects {
-    padding: 20px 5px;
-    border-bottom: 1px solid #dcd9d9;
-    text-align: center
-}
-
-#projects h2 {
-    color: #374054;
-    margin-bottom: 50px
-}
-
-.project {
-    display: flex;
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 4px
-}
-
-.project-image {
-    max-width: 50%;
-    max-height: 50%;
-    object-fit: contain;
-}
-
-.project-imageOverlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(95, 177, 231, 0.8);
-}
-
-.project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 15px
-}
-
-.project-info h3 {
-    font-size: 1.5em;
-    font-weight: 400;
-    color: #fff;
-    margin: 0 0 15px 0;
-    text-shadow: 1px 1px #000;
-}
-
-.project-info p {
-    color: #fff;
-    margin: 0 0 15px 0;
-    font-size: 1.1em;
-    text-shadow: 1px 1px #000;
-    font-weight: 300;
-}
-
-.no-image .project-info {
-    position: relative;
-    margin: 0;
-    padding: 30px 15px;
-    transform: none
-}
-
-#more-projects {
-    display: none
-}
-
 #skills {
     padding: 20px 5px;
     text-align: center
@@ -678,49 +607,6 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
 }
 
-.optional-section {
-    padding: 50px 15px;
-    text-align: center;
-    border-top: 1px solid #dcd9d9
-}
-
-.optional-section h2 {
-    color: #374054
-}
-
-.optional-section-block {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    padding: 15px;
-    border: 1px solid #dcd9d9;
-    background: #fff;
-    text-align: left
-}
-
-.optional-section-block h3 {
-    font-weight: 500;
-    margin: 0 0 15px 0;
-    color: #374054
-}
-
-.optional-section-block h4 {
-    color: #74808a;
-    clear: both;
-    font-weight: 500;
-    margin: 0 0 15px 0
-}
-
-.optional-section-block p,
-.optional-section-block ul {
-    margin: 0 0 15px 0;
-    color: #74808a;
-    font-size: 0.9em
-}
-
-.optional-section-block ul {
-    padding: 0 0 0 15px
-}
-
 
 /* Media quires for apple devices*/
 
@@ -752,6 +638,17 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+    .flip {
+        width: 200px;
+    }
+    .flip h5 {
+        font-weight: 80px;
+        font-size: 20px;
+    }
+    .flip>.front,
+    .flip>.back {
+        height: 250px;
+    }
     header {
         position: fixed;
         display: none;
@@ -789,16 +686,6 @@ footer {
     .education-block span {
         float: none
     }
-    .project-image {
-        display: none
-    }
-    .project-info {
-        position: relative;
-        margin: 0;
-        padding: 30px 15px;
-        top: auto;
-        transform: none
-    }
     footer {
         text-align: center
     }
@@ -807,7 +694,18 @@ footer {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 501px) {
+    .flip {
+        width: 400px;
+    }
+    .flip h5 {
+        font-weight: 80px;
+        font-size: 20px;
+    }
+    .flip>.front,
+    .flip>.back {
+        height: 200px;
+    }
     #lead-content h1 {
         font-size: 1.5em
     }
@@ -843,12 +741,35 @@ footer {
 
 .ExperienceList a:hover {
     box-shadow: inset 2em 0 black;
+    position: relative;
 }
 
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+a[data-title]:hover:after {
+    content: attr(data-title);
+    padding: 4px 8px;
+    color: #333;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    white-space: nowrap;
+    z-index: 10000px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 0px 4px #222;
+    -webkit-box-shadow: 0px 0px 4px #222;
+    box-shadow: 0px 0px 4px #222;
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
 }
 
 .modal {
@@ -949,6 +870,8 @@ footer {
     position: relative;
     display: inline-block;
     line-height: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ml5 .line {
@@ -1014,4 +937,85 @@ footer {
     color: #a0cfee;
     display: inline-block;
     line-height: 1em;
+}
+
+
+/* Projects flipping motion in pure CSS */
+
+#projects {
+    padding: 20px 5px;
+    text-align: center
+}
+
+.flip {
+    position: relative;
+}
+
+.flip>.front,
+.flip>.back {
+    display: block;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 1s;
+    transition-property: transform, opacity;
+}
+
+.flip>.front {
+    transform: rotateY(0deg);
+}
+
+.flip>.back {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+}
+
+.flip:hover>.front {
+    transform: rotateY(180deg);
+}
+
+.flip:hover>.back {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.flip {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 1em;
+    width: 900px;
+}
+
+.flip h5 {
+    font-weight: 100px;
+    font-size: 30px;
+    color: #000;
+}
+
+.flip>.front,
+.flip>.back {
+    display: block;
+    color: white;
+    width: inherit;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 400px;
+    padding: 1em 2em;
+    background: #313131;
+    border-radius: 10px;
+}
+
+.flip>.front p,
+.flip>.back p {
+    font-size: 0.9125rem;
+    line-height: 160%;
+    color: #999;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px #3498db;
 }
