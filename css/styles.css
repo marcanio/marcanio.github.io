@@ -542,6 +542,7 @@ footer {
     header {
         z-index: 999;
         animation: none;
+        display: none;
         height: 100%
     }
     header a {
@@ -749,9 +750,8 @@ section {
     float: left;
     overflow: hidden;
     margin: 10px 1%;
-    min-width: 275px;
+    min-width: auto;
     max-width: 600px;
-    width: 100%;
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
@@ -767,8 +767,7 @@ section {
 
 img {
     max-width: 100%;
-    vertical-align: top;
-    height: 310px;
+    max-height: 100%;
 }
 
 .item:hover img {
@@ -799,10 +798,10 @@ img {
 .item .button {
     position: absolute;
     bottom: -100px;
-    left: 25%;
-    width: 50%;
+    left: 35%;
+    width: 30%;
     border: 3px solid #3498db;
-    padding: 15px;
+    padding: 5px;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
 }
