@@ -206,25 +206,42 @@
     <!-- End #education -->
 
     <div id="projects" class="background-alt">
-        <!-- Header-->
-        <h1 class="ml5" class="hideme">
-            <span class="text-wrapper">
+        <section>
+            <!-- Header-->
+            <h1 class="ml5" class="hideme">
+                <span class="text-wrapper">
            
             <span class="letters letters-left">Projects</span>
-            <span class="line line2"></span>
-            </span>
-        </h1>
+                <span class="line line2"></span>
+                </span>
+            </h1>
+            <div class="container">
 
+                <div class="item" id="1">
+                    <img src="images/rsz_pipeline.png" alt="">
+                    <div class="text">
+                        <h3>Pipelined Proccessor</h4>
+                            <p>Short Description</p>
+                    </div>
+                    <div class="button" id="button">Learn More</div>
+                </div>
 
-        <div class="flip">
-            <div class="front" style="background-image: url(images/rsz_pipeline.png);width: 900px; object-fit: cover;">
-                <h5 class="text-shadow">Pipelined Proccessor</h5>
             </div>
-            <div class="back">
-                <h2>This will work at some point</h2>
-                <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+
+            <div id="preview" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img id="img" src="">
+                    <div id="details">
+                        <h3 id="title"></h3>
+                        <p id="info">Some text</p>
+                        <div class="button" id="live">View</div>
+                        <i class="fab fa-github-square" id="github"></i>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
     </div>
 
     <!-- End .project-info -->
