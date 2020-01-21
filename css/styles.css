@@ -351,70 +351,6 @@ footer {
     left: 303px
 }
 
-.vtimeline-content {
-    margin-left: 350px;
-    background: #fff;
-    border: 1px solid #e6e6e6;
-    padding: 15px;
-    border-radius: 3px;
-    text-align: left
-}
-
-.vtimeline-content h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #374054;
-    display: inline-block;
-    margin: 0
-}
-
-.vtimeline-content h4 {
-    font-size: 1.2em;
-    font-weight: 300;
-    color: #7e8890;
-    margin: 0 0 15px 0
-}
-
-.vtimeline-content p {
-    color: #74808a;
-    font-size: 0.9em;
-    margin: 0
-}
-
-.vtimeline-point {
-    position: relative;
-    display: block;
-    vertical-align: top;
-    margin-bottom: 30px
-}
-
-.vtimeline-icon {
-    position: relative;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    background: #3498db;
-    border-radius: 50%;
-    float: left;
-    z-index: 99;
-    margin-left: 280px
-}
-
-.vtimeline-icon i {
-    display: block;
-    font-size: 2em;
-    margin-top: 10px
-}
-
-.vtimeline-date {
-    width: 260px;
-    text-align: center;
-    position: absolute;
-    left: 0;
-    top: 20px;
-    color: #374054
-}
-
 #education {
     padding: 20px 5px;
     border-bottom: 1px solid #dcd9d9;
@@ -603,28 +539,20 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    /*Add flip inside here*/
+    .hideme {
+        opacity: .3;
+    }
     header {
-        position: fixed;
-        display: none;
         z-index: 999;
         animation: none;
-        bottom: 0;
         height: 100%
     }
-    #mobile-menu-open,
-    #mobile-menu-close {
-        display: block
-    }
     #menu {
-        height: 100%;
-        overflow-y: auto;
         box-shadow: none;
-        border-radius: 0;
-        width: 100%
+        border-radius: 4;
     }
     #menu li {
-        display: block;
+        display: inline-block;
         margin-bottom: 10px
     }
     #lead-content h1 {
@@ -650,25 +578,6 @@ footer {
 }
 
 @media only screen and (max-width: 501px) {
-    .flip {
-        position: relative;
-        display: inline-block;
-        margin-right: 2px;
-        margin-bottom: 1em;
-        width: 300px;
-    }
-    .flip>.front,
-    .flip>.back {
-        display: block;
-        color: white;
-        width: inherit;
-        background-size: cover !important;
-        background-position: center !important;
-        height: 150px;
-        padding: 1em 2em;
-        background: #313131;
-        border-radius: 10px;
-    }
     #lead-content h1 {
         font-size: 1.5em
     }

@@ -3,30 +3,6 @@ let i = 0;
 let j = 0;
 let k = 0;
 
-
-//Not used anymore
-/*
-function typeWriter() {
-    let txt = 'Hello my name is';
-    let txt2 = "Eric Marcanio";
-    let txt3 = "I'm a Computer Engineer";
-    let speed = 60;
-    if (i < txt.length) {
-        document.getElementById("HiMyName").innerHTML += txt.charAt(i);
-        i++;
-
-    } else if (j < txt2.length) {
-        document.getElementById("MyName").innerHTML += txt2.charAt(j);
-        j++;
-    } else {
-        document.getElementById("computa").innerHTML += txt3.charAt(k);
-        k++;
-
-    }
-    setTimeout(typeWriter, speed);
-}
-*/
-
 //Scrolling feature down the page
 $(document).ready(function() {
 
@@ -128,6 +104,20 @@ $(document).ready(function() {
         return false;
     });
 
+    //Also placed outside in case the screen is reloded and you are currently on an object
+    $('.hideme').each(function(i) {
+
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        /* If the object is completely visible in the window, fade it it */
+        if (bottom_of_window >= bottom_of_object) {
+
+            $(this).animate({ 'opacity': '1' }, 500);
+
+        }
+
+    });
     //Objects appear when they show up on the screen
     $(window).scroll(function() {
 
@@ -138,7 +128,7 @@ $(document).ready(function() {
             var bottom_of_window = $(window).scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
-            if (bottom_of_window > bottom_of_object) {
+            if (bottom_of_window >= bottom_of_object) {
 
                 $(this).animate({ 'opacity': '1' }, 500);
 
@@ -165,3 +155,27 @@ $(document).ready(function() {
 
 
 });
+
+
+//Not used anymore
+/*
+function typeWriter() {
+    let txt = 'Hello my name is';
+    let txt2 = "Eric Marcanio";
+    let txt3 = "I'm a Computer Engineer";
+    let speed = 60;
+    if (i < txt.length) {
+        document.getElementById("HiMyName").innerHTML += txt.charAt(i);
+        i++;
+
+    } else if (j < txt2.length) {
+        document.getElementById("MyName").innerHTML += txt2.charAt(j);
+        j++;
+    } else {
+        document.getElementById("computa").innerHTML += txt3.charAt(k);
+        k++;
+
+    }
+    setTimeout(typeWriter, speed);
+}
+*/
