@@ -29,7 +29,7 @@ body.active {
 }
 
 .hideme {
-    opacity: 0;
+    opacity: .3;
 }
 
 .no-js #experience-timeline>div h3 {
@@ -539,13 +539,13 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    .hideme {
-        opacity: .3;
-    }
     header {
         z-index: 999;
         animation: none;
         height: 100%
+    }
+    header a {
+        padding: 3px
     }
     #menu {
         box-shadow: none;
