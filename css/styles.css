@@ -116,41 +116,6 @@ header.sticky {
     display: block
 }
 
-#mobile-menu-open {
-    display: none;
-    cursor: pointer;
-    position: fixed;
-    right: 15px;
-    top: 10px;
-    color: #3498db;
-    font-size: 1.5em;
-    z-index: 20;
-    padding: 0 7px;
-    border-radius: 4px;
-    background: #fff
-}
-
-#mobile-menu-close {
-    display: none;
-    text-align: right;
-    width: 100%;
-    background: #fff;
-    font-size: 1.5em;
-    padding-right: 15px;
-    padding-top: 10px;
-    cursor: pointer;
-    color: #3498db
-}
-
-#mobile-menu-close span {
-    font-size: 0.5em;
-    text-transform: uppercase
-}
-
-#mobile-menu-close i {
-    vertical-align: middle
-}
-
 footer {
     padding: 50px 0
 }
@@ -875,8 +840,8 @@ section {
     float: left;
     overflow: hidden;
     margin: 10px 1%;
-    min-width: 300px;
-    max-width: 650px;
+    min-width: 275px;
+    max-width: 600px;
     width: 100%;
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
