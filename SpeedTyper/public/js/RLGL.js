@@ -94,7 +94,7 @@ function redLight() {
     document.getElementById("trafficLightID").src = 'public/images/RedLight.png';
     var duration;
     duration = Math.floor(Math.random() * (5 - 2)) + 2;
-   // document.getElementById("TEST2").innerHTML += ",REDLIGHT: " + duration;
+    // document.getElementById("TEST2").innerHTML += ",REDLIGHT: " + duration;
     setTimeout(greenLight, duration * 1000);
 }
 
@@ -104,7 +104,7 @@ function greenLight() {
     }
 
     redlightTime = false;
-    document.getElementById("trafficLightID").src = 'public/images/greenLight.png';
+    document.getElementById("trafficLightID").src = 'public/images/GreenLight.png';
 
 }
 /*
