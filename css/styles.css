@@ -237,8 +237,8 @@ footer {
 
 #lead-content h2 {
     color: #a0cfee;
-    font-weight: 500;
-    font-size: 2.25em;
+    font-weight: 400;
+    font-size: 2em;
 }
 
 #lead-overlay {
@@ -689,8 +689,8 @@ a[data-title]:hover:after {
 
 .ml4 {
     position: relative;
-    font-weight: 900;
-    font-size: 4.5em;
+    font-weight: 400;
+    font-size: 2em;
 }
 
 .ml4 .letters {
@@ -739,18 +739,18 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
+    max-width: 80%;
+    width: auto;
 }
 
 .item {
     position: relative;
     border-radius: 10px;
+    max-width: 700px;
+    width: auto;
     background-color: #fafafc91;
-    display: block;
-    position: relative;
+    display: table-cell;
     overflow: hidden;
-    min-height: 300px;
-    max-width: 600px;
     text-align: center;
     box-sizing: border-box;
     margin: 1em 1em;
@@ -819,7 +819,27 @@ img {
     transition: all 0.3s ease-in-out;
 }
 
+.item .button2 {
+    position: absolute;
+    bottom: -100px;
+    left: 35%;
+    width: 30%;
+    border: 3px solid #3498db;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.item:hover .button2 {
+    bottom: 20%;
+}
+
 .button:hover {
+    background-color: #3498db;
+    color: #F5F5F5;
+}
+
+.button2:hover {
     background-color: #3498db;
     color: #F5F5F5;
 }
@@ -843,7 +863,8 @@ img {
     background-color: #F5F5F5;
     margin: 15% auto;
     box-sizing: border-box;
-    width: 30%;
+    max-width: 600px;
+    width: auto;
     max-height: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }

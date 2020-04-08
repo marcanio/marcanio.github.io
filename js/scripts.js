@@ -9,7 +9,7 @@ $(document).ready(function() {
     var modalInfo = {
         1: {
             title: "Project 1",
-            info: "...",
+            info: "hey",
             link: "#",
             github: "#"
         },
@@ -63,9 +63,9 @@ $(document).ready(function() {
     };
 
     function openModal(project) {
-        var id = project.id;
-        var img = project.getElementsByTagName("img")[0].src;
-        fillOut(id, img);
+        //var id = project.id;
+        //var img = project.getElementsByTagName("img")[0].src;
+        // fillOut(id, img);
         modal.style.display = "block";
         document.getElementsByClassName("modal-content")[0].classList.add("scale");
     }
@@ -73,7 +73,7 @@ $(document).ready(function() {
     function fillOut(id, img) {
         document.getElementById("title").innerHTML = modalInfo[id].title;
         document.getElementById("info").innerHTML = modalInfo[id].info;
-        document.getElementById("img").src = img;
+        //document.getElementById("img").src = img;
         document.getElementById("live").onclick = function() {
             window.open(modalInfo[id].link, '_blank');
         }
