@@ -286,7 +286,9 @@ footer {
 
 #about p {
     color: #74808a;
-    margin: 0
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    padding: 15px;
 }
 
 #experience {

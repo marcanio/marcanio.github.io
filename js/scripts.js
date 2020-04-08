@@ -78,18 +78,18 @@ $(document).ready(function() {
             window.open(modalInfo[id].link, '_blank');
         }
         document.getElementById("github").onclick = function() {
-            window.open(modalInfo[id].github, '_blank');
+            window.open(modalInfo[id].github, '_blank'); //This could be better -- FIX
         }
     }
 
     // close the modal
     span.onclick = function() {
-        modal.style.display = "none";
+        modal.style.display = "none"; //Implement with css
     }
 
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = "none";
+            modal.style.display = "none"; //Too lazy to change this..
         }
     }
 
