@@ -11,7 +11,7 @@ $(document).ready(function() {
             title: "Project 1",
             info: "hey",
             link: "#",
-            github: "#"
+            github: "https://github.com/marcanio1/CprE288"
         },
         2: {
             title: "Project 2",
@@ -78,7 +78,7 @@ $(document).ready(function() {
             window.open(modalInfo[id].link, '_blank');
         }
         document.getElementById("github").onclick = function() {
-            window.open(modalInfo[id].github, '_blank'); //This could be better -- FIX
+            window.open(modalInfo[id].github); //This could be better -- FIX
         }
     }
 
