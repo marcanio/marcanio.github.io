@@ -8,9 +8,9 @@ $(document).ready(function() {
 
     var modalInfo = {
         1: {
-            title: "Project 1",
-            info: "hey",
-            link: "#",
+            title: "Mars Rover",
+            info: "In CPrE 288-Embedded Systems, we worked with an iRobot Create with an Atmega 128 microcontroller. For the final project, we had to create a robot that would traverse an unknown course to find a landing zone. The robot would make decisions based on the information given from an IR sensor, Sonar ping sensor, and a rotating stepper motor. The Mars Rover was designed in a team, and my contribution was a python program that would calculate the next moves for the robot. This project taught me how to integrate different software into one project (Embedded C and Python).The link provided is a demonstration of the final project. \n",
+            link: "https://www.youtube.com/watch?v=OU5m58bhZ6Y",
             github: "https://github.com/marcanio1/CprE288"
         },
         2: {
@@ -21,15 +21,15 @@ $(document).ready(function() {
         },
         3: {
             title: "Project 3",
-            info: "...",
+            info: "The LED^3 is a cube made out of LED's connected to an Arduino UNO. A total of 216 LEDs were soldered together in a pattern that allowed me to access each LED individually. Each level of the cube was connected to the ground, and each vertical layer was connected to the Arduino. This allowed me to represent the cube into an array so that I could access each node. A microphone picked up the outside noise, which was converted into a number based on how loud the sound was. With that data, the LED cube 'danced' to the music being played.",
             link: "#",
-            github: "#"
+            github: "https://github.com/marcanio1/LED_Cube"
         },
         4: {
             title: "Project 4",
-            info: "....",
-            link: "#",
-            github: "#"
+            info: "In CPrE- 381 Computer Organization and Assembly Level Programming, we designed a single cycle pipeline processor that was able to run MIPS assembly language. The goal of the project was to develop and test a processor built in VHDL that was correctly outputting the MIPS assembly code. It was a team project individually split up. In VHDL, code is categorized into components. So as a team, we would individually build all of the components and then collaborate to see who had the best idea in terms of efficiency. This project taught me the principles of designing hardware/software interface, MIPS assembly, and a pipelined implementation of MIPS instruction set architecture.The link provided briefly explains the concept of pipeline processing.",
+            link: "https://en.wikipedia.org/wiki/Instruction_pipelining",
+            github: "https://github.com/marcanio1/Processor-design"
         },
         5: {
             title: "Project 5",
@@ -63,14 +63,14 @@ $(document).ready(function() {
     };
 
     function openModal(project) {
-        //var id = project.id;
+        var id = project.id;
         //var img = project.getElementsByTagName("img")[0].src;
-        // fillOut(id, img);
+        fillOut(id);
         modal.style.display = "block";
         document.getElementsByClassName("modal-content")[0].classList.add("scale");
     }
 
-    function fillOut(id, img) {
+    function fillOut(id) {
         document.getElementById("title").innerHTML = modalInfo[id].title;
         document.getElementById("info").innerHTML = modalInfo[id].info;
         //document.getElementById("img").src = img;
@@ -83,8 +83,10 @@ $(document).ready(function() {
     }
 
     // close the modal
-    span.onclick = function() {
-        modal.style.display = "none"; //Implement with css
+    span.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none"; //Too lazy to change this..
+        }
     }
 
     window.onclick = function(event) {

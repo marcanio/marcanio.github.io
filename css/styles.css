@@ -883,6 +883,9 @@ img {
     }
 }
 
+
+/*375 667 - Mars rover= porject when hovered over does not show up correctly*/
+
 #img {
     width: 100%;
     height: auto;
@@ -892,7 +895,7 @@ img {
     padding: 25px;
     text-align: left;
     position: relative;
-    height: 264px;
+    height: auto;
     box-sizing: border-box;
     border-top: 1px solid #363638;
 }
@@ -915,6 +918,10 @@ img {
     left: 25px;
     bottom: 35px;
     padding: 15px;
+}
+
+#details .info {
+    height: 300px;
 }
 
 #details i {
