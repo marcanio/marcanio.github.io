@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hex Guess</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="ColorSelector.css" rel="stylesheet">
+    <script src="ColorSelector.js"></script>
+    <script src="HexGuesser.js"></script>
+
+</head>
+
+
+<body>
+
+    <h1>Hex Guess</h1>
+
+    <div id="MainColorBox">
+
+        <section class="rgbSelectors">
+            <p>Use the sliders to select a color</p>
+            <div class="redRow">
+                <div class="redRange colorName">
+                    <span class="RedSelector">Red</span>
+                </div>
+                <div class="slider redRange redSlider">
+                    <input type="range" name="red" id="r" min="0" max="255" value="0" oninput="showRedVal(this.val); rgbToHex();" onchange="showRedVal(this.value); rgbToHex();">
+                </div>
+                <div id="redSlideValue" class="value redRange">0</div>
+            </div>
+            <div class="greenRow">
+                <div class="greenRange colorName">
+                    <span class="GreenSelector">Green</span>
+                </div>
+                <div class="slider greenRange greenSlider">
+                    <input type="range" name="green" id="g" min="0" max="255" value="0" oninput="showGreenVal(this.value); rgbToHex();" onchange="showGreenVal(this.value); rgbToHex();">
+                </div>
+                <div class="value greenRange" id="greenSlideValue">0</div>
+            </div>
+            <div class="blueRow">
+                <div class="blueRange colorName">
+                    <span class="BlueSelector">Blue</span>
+                </div>
+                <div class="slider blueRange blueSlider">
+                    <input type="range" name="blue" id="b" min="0" max="255" value="0" oninput="showBlueVal(this.value); rgbToHex();" onchange="showBlueVal(this.value); rgbToHex();">
+                </div>
+                <div class="value blueRange" id="blueSlideValue">0</div>
+            </div>
+        </section>
+        <section class="colorValues">
+            <div id="rgbValueBox">
+                <span class="rgbText">RGB (</span>
+                <span id="rSpanValue">00,</span>
+                <span id="gSpanValue">00,</span>
+                <span id="bSpanValue">00</span>
+                <span class="rgbTextClosing">)</span>
+            </div>
+            <div id="HEXValueBox">#000000</div>
+    </div>
+    </section>
+    <a class="btn play" onclick="submitGuess()">Submit Guess</button>
+
+
+
+
+
+
+</body>
+
+</html>

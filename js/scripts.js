@@ -52,7 +52,7 @@ $(document).ready(function() {
     var btn = document.getElementsByClassName("button");
 
     // <span> that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close");
 
     // open modal 
     for (let i = 0; i < btn.length; i++) {
@@ -83,7 +83,7 @@ $(document).ready(function() {
     }
 
     // close the modal
-    span.onclick = function(event) {
+    span[0].onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none"; //Too lazy to change this..
         }
