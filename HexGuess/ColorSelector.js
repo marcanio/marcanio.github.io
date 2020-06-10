@@ -59,6 +59,7 @@ function submitGuess() {
     var ActualValue = parseInt(ActualHex.substr(1, 6), 16);
 
     var HEXValue = document.getElementById("HEXValueBox").innerHTML;
+    localStorage.setItem('userHex', HEXValue);
     var userScore = parseInt(HEXValue.substr(1, 2), 16) + parseInt(HEXValue.substr(3, 4), 16) + parseInt(HEXValue.substr(5, 6), 16);
 
     var RealHex = parseInt(HEXValue.substr(1, 6), 16);
@@ -80,10 +81,18 @@ function submitGuess() {
 }
 
 function getResults() {
+
     let localScore = localStorage.getItem('score');
     localScore = 765 - localScore;
     document.getElementById("displayScore").innerHTML += (localScore);
 
 
+}
+
+function setColors() {
+    let OriginalScore = localStorage.getItem('SaveHex');
+    let userScore = localStorage.getItem('userHex');
+    document.getElementById("Ocolor").style.backgroundColor = OriginalScore;
+    document.getElementById("Ucolor").style.backgroundColor = userScore;
 
 }

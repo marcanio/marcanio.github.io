@@ -130,3 +130,30 @@ h1 {
     color: #fff;
     outline: 0;
 }
+
+.originalColor {
+    top: 350px;
+    float: left;
+    left: 0%;
+    width: 50%;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    Position: absolute;
+    text-align: center;
+}
+
+.userColor {
+    top: 350px;
+    float: right;
+    right: 0%;
+    width: 50%;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    Position: absolute;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    left: 100px;
+}
