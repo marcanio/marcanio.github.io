@@ -30,7 +30,12 @@ function rgbToHex(r, g, b) {
     document.getElementById("HEXValueBox").innerHTML = hexColor;
     //changes background color to HEX value
     document.body.style.backgroundColor = hexColor;
-    document.getElementById("test").innerHTML = localStorage.getItem('SaveHex');
+    //document.getElementById("test").innerHTML = localStorage.getItem('SaveHex');
+
+    var invertedHex = invertColor(hexColor);
+
+    document.getElementById("HexGuessHead").style.color = invertedHex;
+    document.getElementById("submitGuess").style.color = invertedHex;
 
 }
 
@@ -95,4 +100,29 @@ function setColors() {
     document.getElementById("Ocolor").style.backgroundColor = OriginalScore;
     document.getElementById("Ucolor").style.backgroundColor = userScore;
 
+}
+
+function invertColor(hex) {
+    if (hex.indexOf('#') === 0) {
+        hex = hex.slice(1);
+    }
+    // convert 3-digit hex to 6-digits.
+    if (hex.length === 3) {
+        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+    }
+    if (hex.length !== 6) {
+        throw new Error('Invalid HEX color.');
+    }
+    // invert color components
+    var r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16),
+        g = (255 - parseInt(hex.slice(2, 4), 16)).toString(16),
+        b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
+    // pad each with zeros and return
+    return '#' + padZero(r) + padZero(g) + padZero(b);
+}
+
+function padZero(str, len) {
+    len = len || 2;
+    var zeros = new Array(len).join('0');
+    return (zeros + str).slice(-len);
 }
