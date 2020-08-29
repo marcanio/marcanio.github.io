@@ -83,7 +83,7 @@ $(document).ready(function() {
     }
 
     // close the modal
-    span[0].onclick = function(event) {
+    span.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none"; //Too lazy to change this..
         }
