@@ -39,8 +39,8 @@ $(document).ready(function() {
         },
         6: {
             title: "Project 6",
-            info: "...",
-            link: "#",
+            info: "Senior Design Project \n We are making a CPU visualizer that will allow CPRE 281 students to understand the functionality of a CPU better. It will enable them to assemble assembly code and run it through the CPU. Each component of the CPU can be further inspected to see how it is working. The project will allow the students better to understand the importance of logic systems in computers. ",
+            link: "http://sdmay21-38.sd.ece.iastate.edu/",
             github: "#"
         }
     };
