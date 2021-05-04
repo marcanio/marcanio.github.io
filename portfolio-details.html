@@ -27,12 +27,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: MyResume - v4.1.0
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -50,15 +44,15 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                  <img src="assets/img/portfolio/Pipeline2.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                  <img src="assets/img/portfolio/Pipeline3.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                  <img src="assets/img/portfolio/Pipeline4.png" alt="">
                 </div>
 
               </div>
@@ -70,22 +64,35 @@
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Category</strong>: Senior Capstone Project</li>
+                <li><strong>Client</strong>: Iowa State University</li>
+                <li><strong>Project date</strong>: 2020-2021 </li>
+                <li><strong>Project URL</strong>: <a href="http://199.66.13.200/index.html">http://199.66.13.200/index.html</a></li>
               </ul>
             </div>
-            <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
-            </div>
+            
           </div>
 
         </div>
-
+        <div class="portfolio-description">
+          <h2>Visual Debugger for the i281 CPU</h2>
+          <p>
+            <b>Project Background</b><br>
+            The i281 CPU is a processor conceptualized and designed by Dr. Stoytchev and former TA Kyung-Tae Kim. It was created, verified, and simulated using exclusively the DE2-115 FPGA. It is a 16 bit processor designed completely in Quartus using simple logic to teach students how the culmination of knowledge taught in CprE 281 (Iowa State’s digital logic course) can be used to create a working processor that can run assembly code. 
+            The course builds from boolean algebra into designing complex circuits. Since the course is often a student's first course in the Computer Engineering curriculum, it is challenging to understand at first.  At the end of the semester the course introduces assembly code and the fundamentals of a processor, which are very abstract concepts to understand. This is why we are creating a simulation to explain the concept in an in depth and responsive manner. It also works to show students how the connection between assembly and machine code works, as in his original presentations Dr. Stoytchev focuses heavily on how the bits propagate through the processor from the machine code assembled by his custom assembler.
+            <br>
+            <b>Problem Statement</b><br>
+            Due to the requirement of having a DE2-115 FPGA, it would be difficult for students to experience and understand many of the concepts that are taught with this new material, and it is advantageous to do so as another course within the program, CprE 381(Computer Architecture), will require students to learn these ideas in depth to implement their own 32 bit processor that can run standard MIPS assembly language.
+            As a result of his desire for students to easily access and understand this knowledge, this project was created to help students learn how a CPU works without the strict requirements of the original design. 
+            <br>
+            <b>Problem Solution and Goals</b><br>
+            The project is a web app CPU simulation. The user will be able to input assembly language into the JavaScript assembler that we developed, which will in turn translate, or assemble, the inputted assembly into machine code. The assembler will offer a visual component to teach the conversion of assembly to machine code. The visualizer will have access to the values stored within the CPU simulation, and will be able to update certain components to reflect what is happening within the simulation.
+            In order to mimic the DE-115 FPGA as much as possible, certain aspects of the I/O are also replicated, namely the switches used for input, and the seven-segment displays that are used for outputting values in memory/registers. See Figure 2 below as reference. 
+            Through this project we want to accomplish a working understandable CPU. The main goal is to have the CPU be easy to understand and also simple enough that any user can learn from the app as they work through it.
+            Aside from this, in order to make future testing and development easier it was also requested that a Verilog version of the project be developed as well, since the original project was exclusively made using block diagram files in Quartus. Along with this, general refactoring and cleaning up of the original BDF files took place to increase readability, and as a result understandability as well.
+            
+          </p>
+        </div>
       </div>
     </section><!-- End Portfolio Details Section -->
 
